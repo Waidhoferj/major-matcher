@@ -7,11 +7,12 @@ from preprocessing.helper import get_recommendations
 
 CONFIG_FILE = os.path.join("weights", "bert_classifier_deployment_weights")
 N_SUGGESTIONS = 3
+DEVICE = "cpu"
 
 
 @cache
 def get_model(config_path: str) -> BertClassifier:
-    bert_classifier = BertClassifier(device="mps")
+    bert_classifier = BertClassifier(device=DEVICE)
     bert_classifier.load_weights(config_path)
     return bert_classifier
 
