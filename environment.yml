@@ -1,0 +1,21 @@
+name: major-matcher
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch
+  - torchvision
+  - matplotlib
+  - numpy
+  - pandas
+  - transformers
+  - ipykernel
+  - scikit-learn
+  - beautifulsoup4
+  - nltk
+  - request
+  - seaborn
+  - pip:
+      - gradio
+      - wakepy
